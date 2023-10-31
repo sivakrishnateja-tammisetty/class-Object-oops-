@@ -1,0 +1,37 @@
+CLASS:It is a template or blueprint for an object.
+OBJECT: It is an instance of a class.
+
+
+#include <iostream>
+using namespace std;
+class Employee
+{
+    int age;
+    string name;
+    string phone;
+    public:
+    void setData(int age,string name,string phone)
+    {
+        this->age=age;
+        this->name=name;
+        this->phone=phone;
+    }
+    void putData()
+    {
+        cout<<"----EMPLOYEE RECORD----"<<endl;
+        cout<<"NAME: "<<name<<endl;
+        cout<<"AGE: "<<age<<endl;
+        cout<<"PHONE NO: "<<phone<<endl;
+    }
+};
+
+int main()
+{
+    Employee e1,e2;
+    e1.setData(20,"Siva","8638902058");
+    e2.setData(23,"krishna","1234567890");
+    e1.putData();
+    e2.putData();
+
+    return 0;
+}
